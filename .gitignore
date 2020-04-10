@@ -24,4 +24,6 @@
 
 # Ignore Spring files.
 /spring/*.pid
+
 .irb_history
+.DS_Store
