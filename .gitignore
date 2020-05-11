@@ -27,3 +27,6 @@
 
 .irb_history
 .DS_Store
+
+# アップロードされたテスト画像を無視する
+/public/uploads
