@@ -59,6 +59,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', logout_path
     assert_select 'a[href=?]', about_path
     assert_select 'a[href=?]', contact_path
+    assert_select '#following', text: /.*#{@user.following.count.to_s}.*/
+    assert_select '#follower', text: /.*#{@user.followers.count.to_s}.*/
 
     get help_path
     assert_select 'title', full_title('Help')
